@@ -31,6 +31,7 @@ before_script:
     ./configure
     make
     sudo make install
+    cd ..
 script:
   - export CXX=$COMPILER;
   - mkdir build

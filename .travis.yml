@@ -24,6 +24,13 @@ before_install:
   - pip install --user cpp-coveralls
 install:
   - sudo apt-get install -y -qq lcov
+before_script:
+  - |
+    travis_retry curl -L https://www.libsdl.org/release/SDL2-2.0.8.tar.gz | tar xz
+    cd SDL2-2.0.8
+    ./configure
+    make
+    sudo make install
 script:
   - export CXX=$COMPILER;
   - mkdir build

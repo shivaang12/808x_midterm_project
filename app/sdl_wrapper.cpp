@@ -12,12 +12,13 @@
 #include <sdl_wrapper.hpp>
 
 Sdl_wrapper::Sdl_wrapper(int width, int height)
-    : width_(width), height_(height) {}
-
-Sdl_wrapper::Sdl_wrapper(
-    int width, int height,
-    std::shared_ptr<std::vector<int>> obstacle_ptr)
-    : width_(width), height_(height), obstacle_ptr_(obstacle_ptr) {}
+    : width_(width), height_(height), isPolling_(true) {
+  SDL_Init(SDL_INIT_VIDEO);
+  SDL_CreateWindowAndRenderer(width_, height_, 0, &window_, &renderer_);
+  SDL_SetRenderDrawColor(renderer_, 0, 0, 0, 0);
+  SDL_RenderClear(renderer_);
+  SDL_RenderPresent(renderer_);
+}
 
 auto Sdl_wrapper::set_width(int width) -> void { width_ = width; }
 
@@ -27,17 +28,54 @@ auto Sdl_wrapper::set_height(int height) -> void { height_ = height; }
 
 auto Sdl_wrapper::get_height(void) -> int { return height_; }
 
-auto Sdl_wrapper::event_handler(void) -> int { return 0; }
+auto Sdl_wrapper::event_handler(void) -> int {
+  SDL_Event event;         // Creating event variable.
+  SDL_PollEvent(&event);   // Poll event, if any.
+  if (event.type == SDL_QUIT) {
+    isPolling_ = false;    // Make the isPolling_ flase.
+  }
+  return 0;                // Conformation of execution.
+}
 
-auto Sdl_wrapper::update_screen(void) -> int { return 0; }
-
-auto Sdl_wrapper::clean(void) -> int { return 0; }
-
-auto Sdl_wrapper::call_delay(int delay) -> int { return 0; }
-
-auto Sdl_wrapper::draw_point(std::pair<int, int> point) -> int { return 0; }
-
-auto Sdl_wrapper::set_obstacle_ptr(
-    std::shared_ptr<std::vector<int>> obstacle_ptr) -> int {
+auto Sdl_wrapper::update_screen(void) -> int {
+  SDL_RenderPresent(
+      renderer_);           // Updating the screen.
   return 0;
 }
+
+auto Sdl_wrapper::clean(void) -> int {
+  SDL_SetRenderDrawColor(renderer_, 0, 0, 0, 0);
+  return SDL_RenderClear(
+      renderer_);           // Clear the screen.
+}
+
+auto Sdl_wrapper::call_delay(int delay) -> int {
+  SDL_Delay(delay);         // Delay.
+  return 0;
+}
+
+auto Sdl_wrapper::draw_point(std::pair<int, int> point) -> int {
+  SDL_SetRenderDrawColor(renderer_,
+      255, 0, 0, 255);      // Set color Red.
+  return
+    SDL_RenderDrawPoint(
+    renderer_,
+    point.first,
+    point.second);          // Draw point at passed coordinate.
+}
+
+auto Sdl_wrapper::draw_point_path(std::pair<int, int> point) -> int {
+  SDL_SetRenderDrawColor(
+      renderer_,
+      0, 255,
+      0, 255);               // Set color Green.
+  return
+    SDL_RenderDrawPoint(
+      renderer_,
+      point.first,
+      point.second);          // Draw point.
+}
+
+auto Sdl_wrapper::check_polling_var(void) -> bool { return isPolling_; }
+
+auto Sdl_wrapper::set_polling_var(bool state) -> void { isPolling_ = state; }

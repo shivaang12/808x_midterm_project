@@ -20,21 +20,6 @@ TEST(testSdl, constructorTest1) {
   EXPECT_EQ(sdl.get_height(), 10);
 }
 /**
- * @brief     2nd Constructor test, cheaking the assignments
- * and checking if the shared_ptr is assigned properly or not
- */
-TEST(testSdl, constructorTest2) {
-  int height = 10;
-  int width = 10;
-  std::vector<int> occ_mat;
-  auto occShared_ptr =
-      std::make_shared<std::vector<int>>(std::move(occ_mat));
-  occ_mat.push_back(0);
-  Sdl_wrapper sdl(width, height, occShared_ptr);
-  EXPECT_EQ(sdl.get_width(), 10);
-  EXPECT_EQ(sdl.get_height(), 10);
-}
-/**
  * @brief     Individual assignment checking of width
  * height and obstacle ptr.
  */
@@ -50,7 +35,6 @@ TEST(testSdl, IndividualAssignment) {
   sdl.set_width(100);
   EXPECT_EQ(sdl.get_width(), 100);
   EXPECT_EQ(sdl.get_height(), 100);
-  EXPECT_EQ(sdl.set_obstacle_ptr(occShared_ptr), 1);
 }
 /**
  * @brief     Testing SDL utilities functionality.
@@ -63,9 +47,20 @@ TEST(testSdl, sdlUtilitiesTest) {
   int delay = 10;
   std::pair<int, int> point = {0, 0};
   Sdl_wrapper sdl(width, height);
-  EXPECT_EQ(sdl.event_handler(), 1);
-  EXPECT_EQ(sdl.update_screen(), 1);
-  EXPECT_EQ(sdl.clean(), 1);
-  EXPECT_EQ(sdl.call_delay(delay), 1);
-  EXPECT_EQ(sdl.draw_point(point), 1);
+  EXPECT_EQ(sdl.event_handler(), 0);
+  EXPECT_EQ(sdl.update_screen(), 0);
+  EXPECT_EQ(sdl.clean(), 0);
+  EXPECT_EQ(sdl.call_delay(delay), 0);
+  EXPECT_EQ(sdl.draw_point(point), 0);
+  EXPECT_EQ(sdl.draw_point_path(point), 0);
+  EXPECT_TRUE(sdl.check_polling_var());
+}
+/**
+ * @brief     Testing event handler with polling variable.
+ */
+TEST(testSdl, pollingVarTest) {
+  Sdl_wrapper sdl(10, 10);
+  sdl.set_polling_var(false);
+  sdl.event_handler();
+  EXPECT_FALSE(sdl.check_polling_var());
 }

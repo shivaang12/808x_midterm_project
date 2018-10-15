@@ -12,5 +12,7 @@ add_executable(
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 
-                                           ${CMAKE_SOURCE_DIR}/include)
+                                           ${CMAKE_SOURCE_DIR}/include
+                                           ${SDL2_INCLUDE_DIRS})
+target_link_libraries(cpp-test PUBLIC ${SDL2_LIBRARIES})
 target_link_libraries(cpp-test PUBLIC gtest)

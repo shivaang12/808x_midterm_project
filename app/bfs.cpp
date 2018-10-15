@@ -28,7 +28,6 @@ Bfs::Bfs(int width, int height, std::pair<int, int> start_point,
 auto Bfs::set_occmat(std::shared_ptr<std::vector<int>> occupancy_matrix)
     -> int {
   occupancy_matrix_ = occupancy_matrix;
-
   return 0;
 }
 

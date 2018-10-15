@@ -8,7 +8,7 @@
  * BFS. Breadth First Search algorithm is used for traversing as well as
  * searching. It starts at root and explores all the neighbor nodes at
  * current depth before moving to next depth untill it finds the required
- * thing or traverse to the goal point respectively.
+ * thing, or traverse to the goal point respectively.
  *
  */
 
@@ -19,7 +19,7 @@
 #include <vector>
 
 /**
- * @brief      BFS algorithm class which is used to find stortest path possible
+ * @brief      Bfs class which is used to find stortest path possible
  * by using BFS algorithm.
  */
 class Bfs {
@@ -33,23 +33,23 @@ class Bfs {
    * @param[in]   start_point, goal_point: start_point and goal_point
    * of the algorithm
    *
-   * @return      void: Return nothing.
+   * @return      none: Return nothing.
    */
   Bfs(int width, int height, std::pair<int, int> start_point,
       std::pair<int, int> goal_point);
   /**
-   * @brief       A constructor sets width_, height_, start_point_ and
-   *  goal_point_ vars of the class.
+   * @brief       A constructor sets width_, height_, start_point_,
+   *  goal_point_ vars and occupancy_matrix of the class.
    *
    * @param[in]   width, height: width and height of the planned area.
    * 
    * @param[in]   start_point, goal_point: start_point and goal_point
    * of the algorithm
    * 
-   * @param[in]   occupancy_matrix: This thing holds the information
+   * @param[in]   occupancy_matrix: This var holds the information
    * of the area. Such as obstacle space or traversable space.
    *
-   * @return      void: Return nothing.
+   * @return      none: Return nothing.
    */
   Bfs(int width, int height, std::pair<int, int> start_point,
       std::pair<int, int> goal_point,
@@ -60,7 +60,7 @@ class Bfs {
    * @param[in]   occupancy_matrix: This thing holds the information
    * of the area. Such as obstacle space or traversable space.
    *
-   * @return      void: Return nothing.
+   * @return      int: 0 for sucessful execution.
    */
   auto set_occmat(std::shared_ptr<std::vector<int>> occupancy_matrix) -> int;
   /**
@@ -120,7 +120,7 @@ class Bfs {
    */
   auto get_goalpoint(void) -> std::pair<int, int>;
   /**
-   * @brief       This point provides the possible neighbors of param point.
+   * @brief       This function provides the possible neighbors of param point.
    *
    * @param[in]   point: co-ordinate on the map.
    *

@@ -62,7 +62,7 @@ class Sdl_wrapper {
   auto set_height(int height) -> void;
   /**
    * @brief       Getter method to get the
-   * width_ var of the class.
+   * height_ var of the class.
    *
    * @return      int: var height_.
    */

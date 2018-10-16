@@ -1,0 +1,222 @@
+\hypertarget{class_obstacle__generator}{}\section{Obstacle\+\_\+generator Class Reference}
+\label{class_obstacle__generator}\index{Obstacle\+\_\+generator@{Obstacle\+\_\+generator}}
+
+
+This class will mimic the Acme\textquotesingle{}s high level planner\textquotesingle{}s . This class will provide the hight and width of the area, obstacle space and start -\/ goal points. And evoke the planner.  
+
+
+
+
+{\ttfamily \#include $<$obstacle\+\_\+generator.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_obstacle__generator_ad459071be71de51925d40a8f5c801de1}{Obstacle\+\_\+generator} (void)
+\begin{DoxyCompactList}\small\item\em A constructor sets width\+\_\+ and height\+\_\+ vars of the class. \end{DoxyCompactList}\item 
+\hyperlink{class_obstacle__generator_a5ab7dc95ba001a8222409fdf1a9ea569}{Obstacle\+\_\+generator} (std\+::pair$<$ int, int $>$ start\+\_\+point, std\+::pair$<$ int, int $>$ goal\+\_\+point, bool debug)
+\begin{DoxyCompactList}\small\item\em A constructor sets start point, goal point and debug flag vars of the class. \end{DoxyCompactList}\item 
+auto \hyperlink{class_obstacle__generator_a0d6b80b9e69dfe5371abf1ac05bca14a}{generate\+\_\+obstacles} (void) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em This method will generate obstacle artificially. \end{DoxyCompactList}\item 
+auto \hyperlink{class_obstacle__generator_a07e43157157ba7a26f3fbbc85742d4cb}{get\+\_\+height} (void) -\/$>$ int
+\begin{DoxyCompactList}\small\item\em Getter method to get the height\+\_\+ var of the class. \end{DoxyCompactList}\item 
+auto \hyperlink{class_obstacle__generator_aaf11b5d507ff8917f732582f406676c4}{get\+\_\+width} (void) -\/$>$ int
+\begin{DoxyCompactList}\small\item\em Getter method to get the width\+\_\+ var of the class. \end{DoxyCompactList}\item 
+auto \hyperlink{class_obstacle__generator_a5bcf25ad3d23e51d7023c948f227c03d}{get\+\_\+startpoint} (void) -\/$>$ std\+::pair$<$ int, int $>$
+\begin{DoxyCompactList}\small\item\em Getter method to retrive the start\+\_\+point\+\_\+ var of the class. \end{DoxyCompactList}\item 
+auto \hyperlink{class_obstacle__generator_a7a741dd1a0797e1c560063fed40c5d49}{get\+\_\+goalpoint} (void) -\/$>$ std\+::pair$<$ int, int $>$
+\begin{DoxyCompactList}\small\item\em Getter method to retrive the goal\+\_\+point\+\_\+ var of the class. \end{DoxyCompactList}\item 
+auto \hyperlink{class_obstacle__generator_a58c2296becc0dea68389627dac19866c}{run\+\_\+bfs} (void) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em This function will handle \hyperlink{class_bfs}{Bfs} object. \end{DoxyCompactList}\item 
+auto \hyperlink{class_obstacle__generator_ae6c0fa1079d03da92ed755616f60f0fd}{run\+\_\+sdl} (void) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em This function will handle \hyperlink{class_sdl__wrapper}{Sdl\+\_\+wrapper} object. \end{DoxyCompactList}\item 
+auto \hyperlink{class_obstacle__generator_a39a8327cc53304fba5091b55c5967ef3}{calculate\+\_\+euclidean\+\_\+dist} (int x1, int y1, int x2, int y2) -\/$>$ double
+\begin{DoxyCompactList}\small\item\em This function will provide euclidean distace. \end{DoxyCompactList}\item 
+auto \hyperlink{class_obstacle__generator_a5a8d87ae23a81a3697e2f23134781fa2}{get\+\_\+obstacle\+\_\+space} (void) -\/$>$ std\+::vector$<$ int $>$
+\begin{DoxyCompactList}\small\item\em This function will return class var obstacle\+\_\+space\+\_\+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class will mimic the Acme\textquotesingle{}s high level planner\textquotesingle{}s . This class will provide the hight and width of the area, obstacle space and start -\/ goal points. And evoke the planner. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Obstacle\+\_\+generator@{Obstacle\+\_\+generator}!Obstacle\+\_\+generator@{Obstacle\+\_\+generator}}
+\index{Obstacle\+\_\+generator@{Obstacle\+\_\+generator}!Obstacle\+\_\+generator@{Obstacle\+\_\+generator}}
+\subsubsection[{\texorpdfstring{Obstacle\+\_\+generator(void)}{Obstacle_generator(void)}}]{\setlength{\rightskip}{0pt plus 5cm}Obstacle\+\_\+generator\+::\+Obstacle\+\_\+generator (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_obstacle__generator_ad459071be71de51925d40a8f5c801de1}{}\label{class_obstacle__generator_ad459071be71de51925d40a8f5c801de1}
+
+
+A constructor sets width\+\_\+ and height\+\_\+ vars of the class. 
+
+\begin{DoxyReturn}{Returns}
+Return nothing. 
+\end{DoxyReturn}
+\index{Obstacle\+\_\+generator@{Obstacle\+\_\+generator}!Obstacle\+\_\+generator@{Obstacle\+\_\+generator}}
+\index{Obstacle\+\_\+generator@{Obstacle\+\_\+generator}!Obstacle\+\_\+generator@{Obstacle\+\_\+generator}}
+\subsubsection[{\texorpdfstring{Obstacle\+\_\+generator(std\+::pair$<$ int, int $>$ start\+\_\+point, std\+::pair$<$ int, int $>$ goal\+\_\+point, bool debug)}{Obstacle_generator(std::pair< int, int > start_point, std::pair< int, int > goal_point, bool debug)}}]{\setlength{\rightskip}{0pt plus 5cm}Obstacle\+\_\+generator\+::\+Obstacle\+\_\+generator (
+\begin{DoxyParamCaption}
+\item[{std\+::pair$<$ int, int $>$}]{start\+\_\+point, }
+\item[{std\+::pair$<$ int, int $>$}]{goal\+\_\+point, }
+\item[{bool}]{debug}
+\end{DoxyParamCaption}
+)}\hypertarget{class_obstacle__generator_a5ab7dc95ba001a8222409fdf1a9ea569}{}\label{class_obstacle__generator_a5ab7dc95ba001a8222409fdf1a9ea569}
+
+
+A constructor sets start point, goal point and debug flag vars of the class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em start\+\_\+point,goal\+\_\+point} & Start and goal point for B\+FS.\\
+\hline
+\mbox{\tt in}  & {\em debug} & true for debug, false for not debug.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return nothing. 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{Obstacle\+\_\+generator@{Obstacle\+\_\+generator}!calculate\+\_\+euclidean\+\_\+dist@{calculate\+\_\+euclidean\+\_\+dist}}
+\index{calculate\+\_\+euclidean\+\_\+dist@{calculate\+\_\+euclidean\+\_\+dist}!Obstacle\+\_\+generator@{Obstacle\+\_\+generator}}
+\subsubsection[{\texorpdfstring{calculate\+\_\+euclidean\+\_\+dist(int x1, int y1, int x2, int y2) -\/$>$ double}{calculate_euclidean_dist(int x1, int y1, int x2, int y2) -> double}}]{\setlength{\rightskip}{0pt plus 5cm}auto Obstacle\+\_\+generator\+::calculate\+\_\+euclidean\+\_\+dist (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+) -\/$>$ double}\hypertarget{class_obstacle__generator_a39a8327cc53304fba5091b55c5967ef3}{}\label{class_obstacle__generator_a39a8327cc53304fba5091b55c5967ef3}
+
+
+This function will provide euclidean distace. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x1,x2,y1,y2} & point (x1, y1) and (x2, y2)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double\+: eucliean distance 
+\end{DoxyReturn}
+\index{Obstacle\+\_\+generator@{Obstacle\+\_\+generator}!generate\+\_\+obstacles@{generate\+\_\+obstacles}}
+\index{generate\+\_\+obstacles@{generate\+\_\+obstacles}!Obstacle\+\_\+generator@{Obstacle\+\_\+generator}}
+\subsubsection[{\texorpdfstring{generate\+\_\+obstacles(void) -\/$>$ void}{generate_obstacles(void) -> void}}]{\setlength{\rightskip}{0pt plus 5cm}auto Obstacle\+\_\+generator\+::generate\+\_\+obstacles (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) -\/$>$ void}\hypertarget{class_obstacle__generator_a0d6b80b9e69dfe5371abf1ac05bca14a}{}\label{class_obstacle__generator_a0d6b80b9e69dfe5371abf1ac05bca14a}
+
+
+This method will generate obstacle artificially. 
+
+\begin{DoxyReturn}{Returns}
+void\+: vector of 1\textquotesingle{}s and 0\textquotesingle{}s, 1 being obstacle and 0 will be traversable space. 
+\end{DoxyReturn}
+Storing all the obstacle pairs (coordinates) into vector.\index{Obstacle\+\_\+generator@{Obstacle\+\_\+generator}!get\+\_\+goalpoint@{get\+\_\+goalpoint}}
+\index{get\+\_\+goalpoint@{get\+\_\+goalpoint}!Obstacle\+\_\+generator@{Obstacle\+\_\+generator}}
+\subsubsection[{\texorpdfstring{get\+\_\+goalpoint(void) -\/$>$ std\+::pair$<$ int, int $>$}{get_goalpoint(void) -> std::pair< int, int >}}]{\setlength{\rightskip}{0pt plus 5cm}auto Obstacle\+\_\+generator\+::get\+\_\+goalpoint (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) -\/$>$ std\+::pair$<$int, int$>$}\hypertarget{class_obstacle__generator_a7a741dd1a0797e1c560063fed40c5d49}{}\label{class_obstacle__generator_a7a741dd1a0797e1c560063fed40c5d49}
+
+
+Getter method to retrive the goal\+\_\+point\+\_\+ var of the class. 
+
+\begin{DoxyReturn}{Returns}
+pair$<$int, int$>$\+: value of goal\+\_\+point\+\_\+ var. 
+\end{DoxyReturn}
+\index{Obstacle\+\_\+generator@{Obstacle\+\_\+generator}!get\+\_\+height@{get\+\_\+height}}
+\index{get\+\_\+height@{get\+\_\+height}!Obstacle\+\_\+generator@{Obstacle\+\_\+generator}}
+\subsubsection[{\texorpdfstring{get\+\_\+height(void) -\/$>$ int}{get_height(void) -> int}}]{\setlength{\rightskip}{0pt plus 5cm}auto Obstacle\+\_\+generator\+::get\+\_\+height (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) -\/$>$ int}\hypertarget{class_obstacle__generator_a07e43157157ba7a26f3fbbc85742d4cb}{}\label{class_obstacle__generator_a07e43157157ba7a26f3fbbc85742d4cb}
+
+
+Getter method to get the height\+\_\+ var of the class. 
+
+\begin{DoxyReturn}{Returns}
+int\+: value of height\+\_\+ var. 
+\end{DoxyReturn}
+\index{Obstacle\+\_\+generator@{Obstacle\+\_\+generator}!get\+\_\+obstacle\+\_\+space@{get\+\_\+obstacle\+\_\+space}}
+\index{get\+\_\+obstacle\+\_\+space@{get\+\_\+obstacle\+\_\+space}!Obstacle\+\_\+generator@{Obstacle\+\_\+generator}}
+\subsubsection[{\texorpdfstring{get\+\_\+obstacle\+\_\+space(void) -\/$>$ std\+::vector$<$ int $>$}{get_obstacle_space(void) -> std::vector< int >}}]{\setlength{\rightskip}{0pt plus 5cm}auto Obstacle\+\_\+generator\+::get\+\_\+obstacle\+\_\+space (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) -\/$>$ std\+::vector$<$int$>$}\hypertarget{class_obstacle__generator_a5a8d87ae23a81a3697e2f23134781fa2}{}\label{class_obstacle__generator_a5a8d87ae23a81a3697e2f23134781fa2}
+
+
+This function will return class var obstacle\+\_\+space\+\_\+. 
+
+\begin{DoxyReturn}{Returns}
+vector$<$int$>$\+: Occupancy Matrix. 
+\end{DoxyReturn}
+\index{Obstacle\+\_\+generator@{Obstacle\+\_\+generator}!get\+\_\+startpoint@{get\+\_\+startpoint}}
+\index{get\+\_\+startpoint@{get\+\_\+startpoint}!Obstacle\+\_\+generator@{Obstacle\+\_\+generator}}
+\subsubsection[{\texorpdfstring{get\+\_\+startpoint(void) -\/$>$ std\+::pair$<$ int, int $>$}{get_startpoint(void) -> std::pair< int, int >}}]{\setlength{\rightskip}{0pt plus 5cm}auto Obstacle\+\_\+generator\+::get\+\_\+startpoint (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) -\/$>$ std\+::pair$<$int, int$>$}\hypertarget{class_obstacle__generator_a5bcf25ad3d23e51d7023c948f227c03d}{}\label{class_obstacle__generator_a5bcf25ad3d23e51d7023c948f227c03d}
+
+
+Getter method to retrive the start\+\_\+point\+\_\+ var of the class. 
+
+\begin{DoxyReturn}{Returns}
+pair$<$int, int$>$\+: value of start\+\_\+point\+\_\+ var. 
+\end{DoxyReturn}
+\index{Obstacle\+\_\+generator@{Obstacle\+\_\+generator}!get\+\_\+width@{get\+\_\+width}}
+\index{get\+\_\+width@{get\+\_\+width}!Obstacle\+\_\+generator@{Obstacle\+\_\+generator}}
+\subsubsection[{\texorpdfstring{get\+\_\+width(void) -\/$>$ int}{get_width(void) -> int}}]{\setlength{\rightskip}{0pt plus 5cm}auto Obstacle\+\_\+generator\+::get\+\_\+width (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) -\/$>$ int}\hypertarget{class_obstacle__generator_aaf11b5d507ff8917f732582f406676c4}{}\label{class_obstacle__generator_aaf11b5d507ff8917f732582f406676c4}
+
+
+Getter method to get the width\+\_\+ var of the class. 
+
+\begin{DoxyReturn}{Returns}
+int\+: value of width\+\_\+ var. 
+\end{DoxyReturn}
+\index{Obstacle\+\_\+generator@{Obstacle\+\_\+generator}!run\+\_\+bfs@{run\+\_\+bfs}}
+\index{run\+\_\+bfs@{run\+\_\+bfs}!Obstacle\+\_\+generator@{Obstacle\+\_\+generator}}
+\subsubsection[{\texorpdfstring{run\+\_\+bfs(void) -\/$>$ void}{run_bfs(void) -> void}}]{\setlength{\rightskip}{0pt plus 5cm}auto Obstacle\+\_\+generator\+::run\+\_\+bfs (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) -\/$>$ void}\hypertarget{class_obstacle__generator_a58c2296becc0dea68389627dac19866c}{}\label{class_obstacle__generator_a58c2296becc0dea68389627dac19866c}
+
+
+This function will handle \hyperlink{class_bfs}{Bfs} object. 
+
+\begin{DoxyReturn}{Returns}
+void\+: none. 
+\end{DoxyReturn}
+\index{Obstacle\+\_\+generator@{Obstacle\+\_\+generator}!run\+\_\+sdl@{run\+\_\+sdl}}
+\index{run\+\_\+sdl@{run\+\_\+sdl}!Obstacle\+\_\+generator@{Obstacle\+\_\+generator}}
+\subsubsection[{\texorpdfstring{run\+\_\+sdl(void) -\/$>$ void}{run_sdl(void) -> void}}]{\setlength{\rightskip}{0pt plus 5cm}auto Obstacle\+\_\+generator\+::run\+\_\+sdl (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) -\/$>$ void}\hypertarget{class_obstacle__generator_ae6c0fa1079d03da92ed755616f60f0fd}{}\label{class_obstacle__generator_ae6c0fa1079d03da92ed755616f60f0fd}
+
+
+This function will handle \hyperlink{class_sdl__wrapper}{Sdl\+\_\+wrapper} object. 
+
+\begin{DoxyReturn}{Returns}
+void\+: none. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/shivang/\+Desktop/808x/rough\+\_\+files/week\+\_\+6/808x\+\_\+midterm\+\_\+project/include/\hyperlink{obstacle__generator_8hpp}{obstacle\+\_\+generator.\+hpp}\item 
+/home/shivang/\+Desktop/808x/rough\+\_\+files/week\+\_\+6/808x\+\_\+midterm\+\_\+project/app/\hyperlink{obstacle__generator_8cpp}{obstacle\+\_\+generator.\+cpp}\end{DoxyCompactItemize}

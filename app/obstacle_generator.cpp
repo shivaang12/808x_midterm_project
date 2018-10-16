@@ -4,7 +4,6 @@
  * @copyright MIT license
  *
  * @brief DESCRIPTION
- *
  * This files implements the class Obstacle_generator.
  *
  */

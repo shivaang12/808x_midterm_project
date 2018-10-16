@@ -4,7 +4,6 @@
  * @copyright MIT license
  *
  * @brief DESCRIPTION
- *
  * This files is the main file which creates
  * object of Obstacle_generator class.
  *

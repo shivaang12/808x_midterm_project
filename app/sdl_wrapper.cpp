@@ -4,7 +4,6 @@
  * @copyright MIT license
  *
  * @brief DESCRIPTION
- *
  * This files implements the class Sdl_wrapper.
  *
  */

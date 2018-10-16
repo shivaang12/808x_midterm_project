@@ -1,0 +1,350 @@
+\hypertarget{class_bfs}{}\section{Bfs Class Reference}
+\label{class_bfs}\index{Bfs@{Bfs}}
+
+
+\hyperlink{class_bfs}{Bfs} class which is used to find stortest path possible by using B\+FS algorithm.  
+
+
+
+
+{\ttfamily \#include $<$bfs.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_bfs_a25bb98dd5a3e3ceab6940adad7e7d758}{Bfs} (int width, int height, std\+::pair$<$ int, int $>$ start\+\_\+point, std\+::pair$<$ int, int $>$ goal\+\_\+point)
+\begin{DoxyCompactList}\small\item\em A constructor sets width\+\_\+, height\+\_\+, start\+\_\+point\+\_\+ and goal\+\_\+point\+\_\+ vars of the class. \end{DoxyCompactList}\item 
+\hyperlink{class_bfs_a9ccaf8189ccb3f590c8ebca2d814c775}{Bfs} (int width, int height, std\+::pair$<$ int, int $>$ start\+\_\+point, std\+::pair$<$ int, int $>$ goal\+\_\+point, std\+::shared\+\_\+ptr$<$ std\+::vector$<$ int $>$$>$ occupancy\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em A constructor sets width\+\_\+, height\+\_\+, start\+\_\+point\+\_\+, goal\+\_\+point\+\_\+ vars and occupancy\+\_\+matrix of the class. \end{DoxyCompactList}\item 
+auto \hyperlink{class_bfs_a731c6ba80fdc5aa90d9c41e2829049a7}{set\+\_\+occmat} (std\+::shared\+\_\+ptr$<$ std\+::vector$<$ int $>$$>$ occupancy\+\_\+matrix) -\/$>$ int
+\begin{DoxyCompactList}\small\item\em Sets the occupancy\+\_\+matrix\+\_\+ of the class. \end{DoxyCompactList}\item 
+auto \hyperlink{class_bfs_a4c6fde0f40891f828481bb460dbca874}{set\+\_\+width} (int width) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Sets the width\+\_\+ var of the class. \end{DoxyCompactList}\item 
+auto \hyperlink{class_bfs_aabc02f36ad832553dcc0c7a59f4ba33f}{get\+\_\+width} (void) -\/$>$ int
+\begin{DoxyCompactList}\small\item\em Getter method to retrive the width\+\_\+ var of the class. \end{DoxyCompactList}\item 
+auto \hyperlink{class_bfs_afe4ec025381a484e7e44c00eefd344a5}{set\+\_\+height} (int height) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Sets the height\+\_\+ var of the class. \end{DoxyCompactList}\item 
+auto \hyperlink{class_bfs_ae982ad85510c5a58d8f7ae0dcd7ca0b7}{get\+\_\+height} (void) -\/$>$ int
+\begin{DoxyCompactList}\small\item\em Getter method to retrive the height\+\_\+ var of the class. \end{DoxyCompactList}\item 
+auto \hyperlink{class_bfs_aa593e45070cc4a6b2da2033db2807dba}{set\+\_\+startpoint} (std\+::pair$<$ int, int $>$ start\+\_\+point) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Sets the start\+\_\+point\+\_\+ var of the class. \end{DoxyCompactList}\item 
+auto \hyperlink{class_bfs_a2135a092516b1a479fcb0ab2c29d7c6b}{get\+\_\+startpoint} (void) -\/$>$ std\+::pair$<$ int, int $>$
+\begin{DoxyCompactList}\small\item\em Getter method to retrive the start\+\_\+point\+\_\+ var of the class. \end{DoxyCompactList}\item 
+auto \hyperlink{class_bfs_ac95348ae1a98455f6e653d3ce1c7d3ae}{set\+\_\+goalpoint} (std\+::pair$<$ int, int $>$ goal\+\_\+point) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Sets the goal\+\_\+point\+\_\+ var of the class. \end{DoxyCompactList}\item 
+auto \hyperlink{class_bfs_adbe43c422422b5813a4865db18f79e52}{get\+\_\+goalpoint} (void) -\/$>$ std\+::pair$<$ int, int $>$
+\begin{DoxyCompactList}\small\item\em Getter method to retrive the goal\+\_\+point\+\_\+ var of the class. \end{DoxyCompactList}\item 
+auto \hyperlink{class_bfs_a5e09e54176f307fe7cb29f6cf623d8c0}{get\+\_\+next\+\_\+point} (std\+::pair$<$ int, int $>$ point) -\/$>$ std\+::vector$<$ std\+::pair$<$ int, int $>$$>$
+\begin{DoxyCompactList}\small\item\em This function provides the possible neighbors of param point. \end{DoxyCompactList}\item 
+auto \hyperlink{class_bfs_a10c97758d2da18f1b21f0ba90287e18d}{start\+Bfs} (void) -\/$>$ std\+::vector$<$ std\+::pair$<$ int, int $>$$>$
+\begin{DoxyCompactList}\small\item\em This function will compute the shortest path acoording to B\+FS algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_bfs}{Bfs} class which is used to find stortest path possible by using B\+FS algorithm. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Bfs@{Bfs}!Bfs@{Bfs}}
+\index{Bfs@{Bfs}!Bfs@{Bfs}}
+\subsubsection[{\texorpdfstring{Bfs(int width, int height, std\+::pair$<$ int, int $>$ start\+\_\+point, std\+::pair$<$ int, int $>$ goal\+\_\+point)}{Bfs(int width, int height, std::pair< int, int > start_point, std::pair< int, int > goal_point)}}]{\setlength{\rightskip}{0pt plus 5cm}Bfs\+::\+Bfs (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{std\+::pair$<$ int, int $>$}]{start\+\_\+point, }
+\item[{std\+::pair$<$ int, int $>$}]{goal\+\_\+point}
+\end{DoxyParamCaption}
+)}\hypertarget{class_bfs_a25bb98dd5a3e3ceab6940adad7e7d758}{}\label{class_bfs_a25bb98dd5a3e3ceab6940adad7e7d758}
+
+
+A constructor sets width\+\_\+, height\+\_\+, start\+\_\+point\+\_\+ and goal\+\_\+point\+\_\+ vars of the class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em width,height} & width and height of the planned area.\\
+\hline
+\mbox{\tt in}  & {\em start\+\_\+point,goal\+\_\+point} & start\+\_\+point and goal\+\_\+point of the algorithm\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none\+: Return nothing. 
+\end{DoxyReturn}
+\index{Bfs@{Bfs}!Bfs@{Bfs}}
+\index{Bfs@{Bfs}!Bfs@{Bfs}}
+\subsubsection[{\texorpdfstring{Bfs(int width, int height, std\+::pair$<$ int, int $>$ start\+\_\+point, std\+::pair$<$ int, int $>$ goal\+\_\+point, std\+::shared\+\_\+ptr$<$ std\+::vector$<$ int $>$$>$ occupancy\+\_\+matrix)}{Bfs(int width, int height, std::pair< int, int > start_point, std::pair< int, int > goal_point, std::shared_ptr< std::vector< int >> occupancy_matrix)}}]{\setlength{\rightskip}{0pt plus 5cm}Bfs\+::\+Bfs (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{std\+::pair$<$ int, int $>$}]{start\+\_\+point, }
+\item[{std\+::pair$<$ int, int $>$}]{goal\+\_\+point, }
+\item[{std\+::shared\+\_\+ptr$<$ std\+::vector$<$ int $>$$>$}]{occupancy\+\_\+matrix}
+\end{DoxyParamCaption}
+)}\hypertarget{class_bfs_a9ccaf8189ccb3f590c8ebca2d814c775}{}\label{class_bfs_a9ccaf8189ccb3f590c8ebca2d814c775}
+
+
+A constructor sets width\+\_\+, height\+\_\+, start\+\_\+point\+\_\+, goal\+\_\+point\+\_\+ vars and occupancy\+\_\+matrix of the class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em width,height} & width and height of the planned area.\\
+\hline
+\mbox{\tt in}  & {\em start\+\_\+point,goal\+\_\+point} & start\+\_\+point and goal\+\_\+point of the algorithm\\
+\hline
+\mbox{\tt in}  & {\em occupancy\+\_\+matrix} & This var holds the information of the area. Such as obstacle space or traversable space.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none\+: Return nothing. 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{Bfs@{Bfs}!get\+\_\+goalpoint@{get\+\_\+goalpoint}}
+\index{get\+\_\+goalpoint@{get\+\_\+goalpoint}!Bfs@{Bfs}}
+\subsubsection[{\texorpdfstring{get\+\_\+goalpoint(void) -\/$>$ std\+::pair$<$ int, int $>$}{get_goalpoint(void) -> std::pair< int, int >}}]{\setlength{\rightskip}{0pt plus 5cm}auto Bfs\+::get\+\_\+goalpoint (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) -\/$>$ std\+::pair$<$int, int$>$}\hypertarget{class_bfs_adbe43c422422b5813a4865db18f79e52}{}\label{class_bfs_adbe43c422422b5813a4865db18f79e52}
+
+
+Getter method to retrive the goal\+\_\+point\+\_\+ var of the class. 
+
+\begin{DoxyReturn}{Returns}
+pair$<$int, int$>$\+: value of goal\+\_\+point\+\_\+ var. 
+\end{DoxyReturn}
+\index{Bfs@{Bfs}!get\+\_\+height@{get\+\_\+height}}
+\index{get\+\_\+height@{get\+\_\+height}!Bfs@{Bfs}}
+\subsubsection[{\texorpdfstring{get\+\_\+height(void) -\/$>$ int}{get_height(void) -> int}}]{\setlength{\rightskip}{0pt plus 5cm}auto Bfs\+::get\+\_\+height (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) -\/$>$ int}\hypertarget{class_bfs_ae982ad85510c5a58d8f7ae0dcd7ca0b7}{}\label{class_bfs_ae982ad85510c5a58d8f7ae0dcd7ca0b7}
+
+
+Getter method to retrive the height\+\_\+ var of the class. 
+
+\begin{DoxyReturn}{Returns}
+int\+: value of height\+\_\+ var. 
+\end{DoxyReturn}
+\index{Bfs@{Bfs}!get\+\_\+next\+\_\+point@{get\+\_\+next\+\_\+point}}
+\index{get\+\_\+next\+\_\+point@{get\+\_\+next\+\_\+point}!Bfs@{Bfs}}
+\subsubsection[{\texorpdfstring{get\+\_\+next\+\_\+point(std\+::pair$<$ int, int $>$ point) -\/$>$ std\+::vector$<$ std\+::pair$<$ int, int $>$$>$}{get_next_point(std::pair< int, int > point) -> std::vector< std::pair< int, int >>}}]{\setlength{\rightskip}{0pt plus 5cm}auto Bfs\+::get\+\_\+next\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{std\+::pair$<$ int, int $>$}]{point}
+\end{DoxyParamCaption}
+) -\/$>$ std\+::vector$<$std\+::pair$<$int, int$>$$>$}\hypertarget{class_bfs_a5e09e54176f307fe7cb29f6cf623d8c0}{}\label{class_bfs_a5e09e54176f307fe7cb29f6cf623d8c0}
+
+
+This function provides the possible neighbors of param point. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em point} & co-\/ordinate on the map.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$pair$<$int, int$>$\+: vector of pairs -\/ co-\/ordinates. 
+\end{DoxyReturn}
+\begin{quote}
+For Exploration \end{quote}
+
+
+\begin{quote}
+Removed obstacle co-\/ordinates from temp\+Container \end{quote}
+
+
+\begin{quote}
+Alis x for x co-\/ordinate of point \end{quote}
+
+
+\begin{quote}
+Alis y for y co-\/ordinate of point \end{quote}
+
+
+Finding possible neighbors of the var point without any knowledge of obstacle.
+
+Now the obtained neighbors are being checked for obstacles.\index{Bfs@{Bfs}!get\+\_\+startpoint@{get\+\_\+startpoint}}
+\index{get\+\_\+startpoint@{get\+\_\+startpoint}!Bfs@{Bfs}}
+\subsubsection[{\texorpdfstring{get\+\_\+startpoint(void) -\/$>$ std\+::pair$<$ int, int $>$}{get_startpoint(void) -> std::pair< int, int >}}]{\setlength{\rightskip}{0pt plus 5cm}auto Bfs\+::get\+\_\+startpoint (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) -\/$>$ std\+::pair$<$int, int$>$}\hypertarget{class_bfs_a2135a092516b1a479fcb0ab2c29d7c6b}{}\label{class_bfs_a2135a092516b1a479fcb0ab2c29d7c6b}
+
+
+Getter method to retrive the start\+\_\+point\+\_\+ var of the class. 
+
+\begin{DoxyReturn}{Returns}
+pair$<$int, int$>$\+: value of start\+\_\+point\+\_\+ var. 
+\end{DoxyReturn}
+\index{Bfs@{Bfs}!get\+\_\+width@{get\+\_\+width}}
+\index{get\+\_\+width@{get\+\_\+width}!Bfs@{Bfs}}
+\subsubsection[{\texorpdfstring{get\+\_\+width(void) -\/$>$ int}{get_width(void) -> int}}]{\setlength{\rightskip}{0pt plus 5cm}auto Bfs\+::get\+\_\+width (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) -\/$>$ int}\hypertarget{class_bfs_aabc02f36ad832553dcc0c7a59f4ba33f}{}\label{class_bfs_aabc02f36ad832553dcc0c7a59f4ba33f}
+
+
+Getter method to retrive the width\+\_\+ var of the class. 
+
+\begin{DoxyReturn}{Returns}
+int\+: value of width\+\_\+ var. 
+\end{DoxyReturn}
+\index{Bfs@{Bfs}!set\+\_\+goalpoint@{set\+\_\+goalpoint}}
+\index{set\+\_\+goalpoint@{set\+\_\+goalpoint}!Bfs@{Bfs}}
+\subsubsection[{\texorpdfstring{set\+\_\+goalpoint(std\+::pair$<$ int, int $>$ goal\+\_\+point) -\/$>$ void}{set_goalpoint(std::pair< int, int > goal_point) -> void}}]{\setlength{\rightskip}{0pt plus 5cm}auto Bfs\+::set\+\_\+goalpoint (
+\begin{DoxyParamCaption}
+\item[{std\+::pair$<$ int, int $>$}]{goal\+\_\+point}
+\end{DoxyParamCaption}
+) -\/$>$ void}\hypertarget{class_bfs_ac95348ae1a98455f6e653d3ce1c7d3ae}{}\label{class_bfs_ac95348ae1a98455f6e653d3ce1c7d3ae}
+
+
+Sets the goal\+\_\+point\+\_\+ var of the class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em goal\+\_\+point} & goal point for the B\+FS algorithm.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void\+: Return nothing. 
+\end{DoxyReturn}
+\index{Bfs@{Bfs}!set\+\_\+height@{set\+\_\+height}}
+\index{set\+\_\+height@{set\+\_\+height}!Bfs@{Bfs}}
+\subsubsection[{\texorpdfstring{set\+\_\+height(int height) -\/$>$ void}{set_height(int height) -> void}}]{\setlength{\rightskip}{0pt plus 5cm}auto Bfs\+::set\+\_\+height (
+\begin{DoxyParamCaption}
+\item[{int}]{height}
+\end{DoxyParamCaption}
+) -\/$>$ void}\hypertarget{class_bfs_afe4ec025381a484e7e44c00eefd344a5}{}\label{class_bfs_afe4ec025381a484e7e44c00eefd344a5}
+
+
+Sets the height\+\_\+ var of the class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em height} & height of the planned area.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void\+: Return nothing. 
+\end{DoxyReturn}
+\index{Bfs@{Bfs}!set\+\_\+occmat@{set\+\_\+occmat}}
+\index{set\+\_\+occmat@{set\+\_\+occmat}!Bfs@{Bfs}}
+\subsubsection[{\texorpdfstring{set\+\_\+occmat(std\+::shared\+\_\+ptr$<$ std\+::vector$<$ int $>$$>$ occupancy\+\_\+matrix) -\/$>$ int}{set_occmat(std::shared_ptr< std::vector< int >> occupancy_matrix) -> int}}]{\setlength{\rightskip}{0pt plus 5cm}auto Bfs\+::set\+\_\+occmat (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ std\+::vector$<$ int $>$$>$}]{occupancy\+\_\+matrix}
+\end{DoxyParamCaption}
+) -\/$>$ int}\hypertarget{class_bfs_a731c6ba80fdc5aa90d9c41e2829049a7}{}\label{class_bfs_a731c6ba80fdc5aa90d9c41e2829049a7}
+
+
+Sets the occupancy\+\_\+matrix\+\_\+ of the class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em occupancy\+\_\+matrix} & This thing holds the information of the area. Such as obstacle space or traversable space.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: 0 for sucessful execution. 
+\end{DoxyReturn}
+\index{Bfs@{Bfs}!set\+\_\+startpoint@{set\+\_\+startpoint}}
+\index{set\+\_\+startpoint@{set\+\_\+startpoint}!Bfs@{Bfs}}
+\subsubsection[{\texorpdfstring{set\+\_\+startpoint(std\+::pair$<$ int, int $>$ start\+\_\+point) -\/$>$ void}{set_startpoint(std::pair< int, int > start_point) -> void}}]{\setlength{\rightskip}{0pt plus 5cm}auto Bfs\+::set\+\_\+startpoint (
+\begin{DoxyParamCaption}
+\item[{std\+::pair$<$ int, int $>$}]{start\+\_\+point}
+\end{DoxyParamCaption}
+) -\/$>$ void}\hypertarget{class_bfs_aa593e45070cc4a6b2da2033db2807dba}{}\label{class_bfs_aa593e45070cc4a6b2da2033db2807dba}
+
+
+Sets the start\+\_\+point\+\_\+ var of the class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em start\+\_\+point} & start point for the B\+FS algorithm.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void\+: Return nothing. 
+\end{DoxyReturn}
+\index{Bfs@{Bfs}!set\+\_\+width@{set\+\_\+width}}
+\index{set\+\_\+width@{set\+\_\+width}!Bfs@{Bfs}}
+\subsubsection[{\texorpdfstring{set\+\_\+width(int width) -\/$>$ void}{set_width(int width) -> void}}]{\setlength{\rightskip}{0pt plus 5cm}auto Bfs\+::set\+\_\+width (
+\begin{DoxyParamCaption}
+\item[{int}]{width}
+\end{DoxyParamCaption}
+) -\/$>$ void}\hypertarget{class_bfs_a4c6fde0f40891f828481bb460dbca874}{}\label{class_bfs_a4c6fde0f40891f828481bb460dbca874}
+
+
+Sets the width\+\_\+ var of the class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em width} & width of the planned area.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void\+: Return nothing. 
+\end{DoxyReturn}
+\index{Bfs@{Bfs}!start\+Bfs@{start\+Bfs}}
+\index{start\+Bfs@{start\+Bfs}!Bfs@{Bfs}}
+\subsubsection[{\texorpdfstring{start\+Bfs(void) -\/$>$ std\+::vector$<$ std\+::pair$<$ int, int $>$$>$}{startBfs(void) -> std::vector< std::pair< int, int >>}}]{\setlength{\rightskip}{0pt plus 5cm}auto Bfs\+::start\+Bfs (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) -\/$>$ std\+::vector$<$std\+::pair$<$int, int$>$$>$}\hypertarget{class_bfs_a10c97758d2da18f1b21f0ba90287e18d}{}\label{class_bfs_a10c97758d2da18f1b21f0ba90287e18d}
+
+
+This function will compute the shortest path acoording to B\+FS algorithm. 
+
+\begin{DoxyReturn}{Returns}
+vector$<$pair$<$int, int$>$\+: vector of pairs contains path in order of co-\/ordinates. 
+\end{DoxyReturn}
+Custom sorter for priority queue.
+
+\begin{quote}
+Alias for start point \end{quote}
+
+
+\begin{quote}
+Alias for Goal point \end{quote}
+
+
+\begin{quote}
+for storing coordinates with \end{quote}
+corresponding cost.
+
+\begin{quote}
+Parent-\/child relations. \end{quote}
+
+
+\begin{quote}
+Tracking cost. \end{quote}
+
+
+Below while loop explores node (co-\/ordinates) from start point to end point.
+
+\begin{quote}
+Exploring the first element. \end{quote}
+
+
+\begin{quote}
+removing that from queue. \end{quote}
+
+
+Below code expands the childs of parent \char`\"{}current\char`\"{} and assigning cost them.
+
+\begin{quote}
+Assigning parent/child \end{quote}
+
+
+Tracing parent-\/child to generate path.
+
+\begin{quote}
+Reversing the path in order. \end{quote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/shivang/\+Desktop/808x/rough\+\_\+files/week\+\_\+6/808x\+\_\+midterm\+\_\+project/include/\hyperlink{bfs_8hpp}{bfs.\+hpp}\item 
+/home/shivang/\+Desktop/808x/rough\+\_\+files/week\+\_\+6/808x\+\_\+midterm\+\_\+project/app/\hyperlink{bfs_8cpp}{bfs.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,56 @@
+\href{https://travis-ci.org/shivaang12/808x_midterm_project}{\tt } \href{https://coveralls.io/github/shivaang12/808x_midterm_project?branch=master}{\tt } \href{https://opensource.org/licenses/MIT}{\tt }
+
+\subsection*{Overview}
+
+A basic planner module for any traversable vehicle by Acme Robotics. Acme\textquotesingle{}s high level planner sometimes need local planner for estimating feasible paths for the robot. This planner, given the information of the environment, starting point and goal point, will provide feasible path from start point to goal point. It will executes Breath First Search algorithm to find feasible path between start point and goal point. More details can be found below.
+
+\subsection*{Dependencies}
+
+To build and run this module successfully, following dependencies should be met\+:
+\begin{DoxyItemize}
+\item C\+Make version at least 3.\+2.\+1
+\item S\+DL 2.\+0.\+8 or higher\+: To download and build the library, please follow the instructions 
+\begin{DoxyCode}
+1 curl -L https://www.libsdl.org/release/SDL2-2.0.8.tar.gz | tar xz cd SDL2-2.0.8
+2 ./configure
+3 make
+4 sudo make install
+\end{DoxyCode}
+
+\item For unit testing, this project depends on {\itshape gtest} framework by Google.
+\end{DoxyItemize}
+
+\#\# Instructions to build the module 
+\begin{DoxyCode}
+1 git clone --recursive https://github.com/shivaang12/808x\_midterm\_project
+2 cd <path to repository>
+3 mkdir build
+4 cd build
+5 cmake ..
+6 make
+7 Run tests: ./test/cpp-test
+8 Run program: ./app/shell-app
+\end{DoxyCode}
+
+
+\subsection*{Algorithm}
+
+Breath First Search algorithm is essentially a search algorithm. It is mostly used for traversing in robotics. Algorithm intitally start from a start point by adding to a priority queue. Then it explores each node from a priority queue to its child and adds to to a priority queue till it encounters goal point. In between, algorithm links each node to its respective childs. If it encounters goal point during exploration, then this links will be used to link back to start point. This will be the feasible path from start point to goal point generated using B\+FS algorithm.
+
+\subsection*{Output}
+
+Given the start point -\/$>$ (0, 599) and goal point -\/$>$ (799, 0), below is the output figure. \tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*1{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}{\bf Output Image  }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}{\bf Output Image  }\\\cline{1-1}
+\endhead
+ \\\cline{1-1}
+\end{longtabu}
+\subsection*{Singular Iterative Process (S\+IP)}
+
+S\+IP process charts for this project can be found \href{https://docs.google.com/spreadsheets/d/1IbgtYZAE8amdw-byhspCRRnXf8tBoE707xSWsrF4pjw/edit?usp=sharing}{\tt here}. 

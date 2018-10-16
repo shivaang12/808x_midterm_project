@@ -37,7 +37,7 @@ Breath First Search algorithm is essentially a search algorithm. It is mostly us
 Given the start point -> (0, 599) and goal point -> (799, 0), below is the output figure.
 | Output Image |
 | ------------- |
-| <img src="https://github.com/shivaang12/808x_midterm_project/data/output.png" width="500"> |
+| <img src="https://github.com/shivaang12/808x_midterm_project/blob/master/data/output.png" width="500"> |
 
 ## Singular Iterative Process (SIP)
 

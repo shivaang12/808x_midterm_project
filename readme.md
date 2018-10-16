@@ -42,3 +42,12 @@ Given the start point -> (0, 599) and goal point -> (799, 0), below is the outpu
 ## Singular Iterative Process (SIP)
 
 SIP process charts for this project can be found [here](https://docs.google.com/spreadsheets/d/1IbgtYZAE8amdw-byhspCRRnXf8tBoE707xSWsrF4pjw/edit?usp=sharing).
+
+## Instructions to generate documentation
+The path of the documentation for this project is `documentation/html/index.html`. The documentation for this project is created using *doxygen-gui*. To generate the documentation again, please execute following the commands:
+```
+$ sudo apt-get install doxygen
+$ sudo apt-get install doxygen-gui
+$ doxywizard
+```
+Last command will open gui version. On the top of the gui window, It will required a working directory. one can give any directory to be start with. Give the source folder path and check the recursive checkbox. And at the bottom, it requires the taeget dir, to which one need to save the documentation files.

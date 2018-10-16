@@ -2,7 +2,6 @@
  * @file      bfs.hpp
  * @author    Shivang Patel
  * @copyright MIT license
- *
  * @brief DESCRIPTION
  * Header file for the class Bfs. Bfs class implements a planning algorithm
  * BFS. Breadth First Search algorithm is used for traversing as well as
@@ -128,7 +127,6 @@ class Bfs {
    */
   auto get_next_point(std::pair<int, int> point)
       -> std::vector<std::pair<int, int>>;
-  
   /**
    * @brief       This function will compute the shortest path acoording
    * to BFS algorithm.

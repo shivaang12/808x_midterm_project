@@ -17,8 +17,8 @@
 
 /**
  * @brief      This class will mimic the Acme's high level planner's
- * input to Bfs module. This class will provide the hight and width of
- * the area, obstacle space and start - goal points.
+ * . This class will provide the hight and width of
+ * the area, obstacle space and start - goal points. And evoke the planner.
  */
 class Obstacle_generator {
  public:
@@ -60,7 +60,7 @@ class Obstacle_generator {
    *
    * @return      int: value of width_ var.
    */
-  auto get_width() -> int;
+  auto get_width(void) -> int;
   /**
    * @brief       Getter method to retrive the start_point_ var of the class.
    *

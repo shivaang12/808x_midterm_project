@@ -1,0 +1,12 @@
+[SHIVANG:~/Desktop/808x/rough_files/week_6/808x_midterm_project] > cpplint $( find . -name \*.hpp -or -name \*.cpp | grep -vE -e "^./build/" -e "^./vendor/" -e "^./docs/" -e "^./results" )
+Done processing ./test/test_sdl.cpp
+Done processing ./test/main.cpp
+Done processing ./test/test_bfs.cpp
+Done processing ./test/test_obstacle.cpp
+Done processing ./include/sdl_wrapper.hpp
+Done processing ./include/obstacle_generator.hpp
+Done processing ./include/bfs.hpp
+Done processing ./app/main.cpp
+Done processing ./app/bfs.cpp
+Done processing ./app/obstacle_generator.cpp
+Done processing ./app/sdl_wrapper.cpp

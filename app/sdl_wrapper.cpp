@@ -45,8 +45,9 @@ auto Sdl_wrapper::update_screen(void) -> int {
 
 auto Sdl_wrapper::clean(void) -> int {
   SDL_SetRenderDrawColor(renderer_, 0, 0, 0, 0);
-  return SDL_RenderClear(
+  SDL_RenderClear(
       renderer_);           // Clear the screen.
+  return 0;
 }
 
 auto Sdl_wrapper::call_delay(int delay) -> int {
@@ -57,11 +58,11 @@ auto Sdl_wrapper::call_delay(int delay) -> int {
 auto Sdl_wrapper::draw_point(std::pair<int, int> point) -> int {
   SDL_SetRenderDrawColor(renderer_,
       255, 0, 0, 255);      // Set color Red.
-  return
-    SDL_RenderDrawPoint(
+  SDL_RenderDrawPoint(
     renderer_,
     point.first,
     point.second);          // Draw point at passed coordinate.
+  return 0;
 }
 
 auto Sdl_wrapper::draw_point_path(std::pair<int, int> point) -> int {
@@ -69,11 +70,11 @@ auto Sdl_wrapper::draw_point_path(std::pair<int, int> point) -> int {
       renderer_,
       0, 255,
       0, 255);               // Set color Green.
-  return
-    SDL_RenderDrawPoint(
+  SDL_RenderDrawPoint(
       renderer_,
       point.first,
       point.second);          // Draw point.
+  return 0;
 }
 
 auto Sdl_wrapper::check_polling_var(void) -> bool { return isPolling_; }
